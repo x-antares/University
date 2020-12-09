@@ -1,10 +1,18 @@
 <?php
 
+namespace vendor\core;
 
+
+/**
+ * Description of Router
+ *
+ *
+ */
 class Router {
 	
 	protected static $routes = [];
 	protected static $route = [];
+
 
 
 	public static function add($regexp, $route = []) {
@@ -59,19 +67,19 @@ class Router {
 	*/
 	public static function dispatch($url) {
 		if(self::matchRoute($url)){
-			$controller = self::$route['controller'];
+			$controller = 'app\controllers\\' . self::$route['controller'];
 			if(class_exists($controller)){
-				$cObj = new $controller;
+				$cObj = new $controller(self::$route);
 				$action = self::$route['action'];
 				if(method_exists($cObj, $action)){
 				$cObj->$action();
-					echo "Works";
+				$cObj->getView();
 				}else{
-				echo 'Action not found';
+				echo "Action <b>$action</b> not found";
 			}
 	
 			}else{
-				echo 'Controller not found';
+				echo "Controller <b>$controller</b> not found";
 			}
 			
 		}else{

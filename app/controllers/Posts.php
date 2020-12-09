@@ -1,10 +1,15 @@
 <?php
 
+namespace app\controllers;
 
 
-class Posts {
+
+
+
+class Posts extends App {
 
 	public function post(){
-	echo 'Hello posts!';	
+	echo 'Hello posts!';
+	
 	}
 }
