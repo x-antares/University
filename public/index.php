@@ -4,25 +4,21 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
- use vendor\core\Router;
+ use university\core\Router;
 
 $query = $_SERVER['QUERY_STRING'];
 
 define('WWW', __DIR__);
-define('CORE', dirname(__DIR__) . '/vendor/core');
+define('CORE', dirname(__DIR__) . '/vendor/university/core');
 define('ROOT', dirname(__DIR__));
 define('APP', dirname(__DIR__) . '/app');
 define('LAYOUT', 'default');
 
 
-require '../vendor/libs/function.php';
+require '../vendor/university/libs/function.php';
+require '../vendor/autoload.php';
 
-spl_autoload_register(function($class){
-  $file = ROOT . '/' . str_replace( '\\', '/', $class) . '.php';
-	if(is_file($file)){
-		require_once $file;
-	}
-});
+
 // Router::add('posts/add', ['controller' => 'Posts', 'action' => 'add']);
 // Router::add('posts/delete', ['controller' => 'Posts', 'action' => 'delete']);
 // Router::add('posts/', ['controller' => 'Posts', 'action' => 'index']);

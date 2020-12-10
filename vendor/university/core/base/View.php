@@ -1,6 +1,6 @@
 <?php
 
-namespace vendor\core\base;
+namespace university\core\base;
 
 
 
@@ -29,16 +29,26 @@ class View {
 	public $layout = [];
 
 
+	/**
+	* Vars
+	* @var string
+	* 
+	*/
+	public $vars = [];
+
+
 	public function __construct($route, $layout = '', $view = ''){
-		var_dump($layout);
-		var_dump($view);
 		$this->route = $route;
 		$this->layout = $layout ?: LAYOUT;
 		$this->view = $view; 
+		// var_dump($this->layout);
+		// var_dump($this->view);
 	}
 
-	public function render(){
+	public function render($vars){
+		if(is_array($vars)) extract($vars);
 		$file_view = APP. "/views/{$this->route['controller']}/{$this->view}.php"; 
+		ob_start();
 		if(is_file($file_view)){
 			require $file_view;
 		}else{
@@ -54,6 +64,7 @@ class View {
 		}
 
 	}
+
 
 }
 

@@ -1,0 +1,11 @@
+{
+    "name": "university/university",
+    "require": {}, 
+    "autoload": {
+    	"psr-4": {
+    		"university\\": "vendor/university",
+    		"app\\": "app"
+    		"": "src/"
+    	}
+    }
+}
