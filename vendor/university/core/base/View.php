@@ -3,35 +3,37 @@
 namespace university\core\base;
 
 
-
+/**
+* Base View
+*/
 class View {
 
 
 	/**
 	* Current route
-	* @var string
+	* @var array
 	* 
 	*/
 	public $route = [];
 
 	/**
-	* View
-	* @var string
+	* View for controller
+	* @var array
 	* 
 	*/
 	public $view = [];
 
 	/**
-	* Current layout
-	* @var string
+	* Layout for View
+	* @var array
 	* 
 	*/
 	public $layout = [];
 
 
 	/**
-	* Vars
-	* @var string
+	* User data
+	* @var array
 	* 
 	*/
 	public $vars = [];
@@ -41,10 +43,11 @@ class View {
 		$this->route = $route;
 		$this->layout = $layout ?: LAYOUT;
 		$this->view = $view; 
-		// var_dump($this->layout);
-		// var_dump($this->view);
 	}
 
+	/**
+	* Complate render
+	*/
 	public function render($vars){
 		if(is_array($vars)) extract($vars);
 		$file_view = APP. "/views/{$this->route['controller']}/{$this->view}.php"; 

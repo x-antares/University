@@ -10,18 +10,29 @@ namespace university\core;
  */
 class Router {
 	
+	/**
+	* All routes
+	* @var array
+	**/
 	protected static $routes = [];
+
+	/**
+	* Current route
+	* @var array
+	**/
 	protected static $route = [];
 
-
-
+	/**
+	* Add new route
+	* @var array
+	**/
 	public static function add($regexp, $route = []) {
 
 		self::$routes[$regexp] = $route;
     }
 
     /**
-	* Return routes
+	* Return all routes
 	* @return array
 	*/
 	public static function getRoutes() {
@@ -29,13 +40,12 @@ class Router {
 	}
 
 	/**
-	* Return currect route
+	* Return current route
 	* @return array
 	*/
 	public static function getRoute() {
 		return self::$route;
 	}
-
 
 	/**
 	* Search Url in table routes
@@ -61,7 +71,7 @@ class Router {
 	}
 
 	/**
-	* Redirect url to correct route
+	* Redirect url to controller with action
 	* @param string $url inputed URL
 	* @return void
 	*/

@@ -1,11 +1,14 @@
 {
     "name": "university/university",
-    "require": {}, 
-    "autoload": {
+    "require": {
+    	"doctrine/orm": "^2.6.2",
+        "fzaninotto/faker": "^1.9",
+        "doctrine/migrations": "^3.0"
+    },
+        "autoload": {
     	"psr-4": {
     		"university\\": "vendor/university",
     		"app\\": "app"
-    		"": "src/"
     	}
-    }
+}
 }

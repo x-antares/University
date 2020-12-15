@@ -13,10 +13,24 @@
 
   </head>
   <body>
-    <h1>Hello, world!</h1>
+ 
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="../Main">List of students</a>
 
-    <?=$content?>
-
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="../Main/new">Add new</a>
+      </li>
+   </ul>
+    <form class="form-inline">
+      <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+     
+    </form>
+     <button class="btn btn-outline-success my-1 my-sm-0" type="submit">Search</button>
+  </div> 
+</nav>
+<?= $content?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="/bootstrap/js/bootstrap.min.js"></script>
   </body>
