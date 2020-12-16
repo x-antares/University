@@ -23,11 +23,6 @@
         <a class="nav-link" href="../Main/new">Add new</a>
       </li>
    </ul>
-    <form class="form-inline">
-      <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-     
-    </form>
-     <button class="btn btn-outline-success my-1 my-sm-0" type="submit">Search</button>
   </div> 
 </nav>
 <?= $content?>
