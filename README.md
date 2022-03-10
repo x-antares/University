@@ -30,7 +30,7 @@ This app allows students to add data on the site.
 
 `php load_fixtures.php`
 
-## How see your load fixture in console
+## How to see your load fixture in console
 
 `php list_student.php`
 
