@@ -18,6 +18,7 @@ This app allows students to add data on the site.
 
     'driver' => 'pdo_mysql',
     'user' => 'username',
+    'host' => 'ip_address',
     'password' => 'userpassword',
     'dbname' => 'databasename',
 
