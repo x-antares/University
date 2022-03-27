@@ -5,7 +5,7 @@ This app allows students to add data on the site.
 
 ## Requirements
 
-* PHP 7.2 =<
+* PHP 7.4 =<
 * Composer
 * Web server **Apache2**
 
