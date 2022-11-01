@@ -23,7 +23,7 @@ This app allows students to add data on the site.
     'dbname' => 'databasename',
 
 4. Installing composer packages `composer install`
-5. Make migrate `./vendor/bin/doctrine-migrations migrate`
+5. Make migrate `php vendor\bin\doctrine-migrations.php migration:migrate`
 6. Go to your site.
 
 

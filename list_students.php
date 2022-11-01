@@ -1,17 +1,15 @@
 <?php
-// list_products.php
-use App\Entity\Student;
 require('vendor/autoload.php');
 require "app/entities/Student.php";
-
 require_once "bootstrap.php";
+
+$console_output_type = 'table';
+$table_name = 'Students';
+$model_fields = ['Id', 'Name', 'Surname', 'Gender', 'Category', 'Faculty'];
 
 $studentRepository = $entityManager->getRepository('App\\Entity\\Student');
 $students = $studentRepository->findAll();
 
-	echo "|ID|" . "|Name|" . "|Surname|" . "|Gender|" . "|Category|" . "|Faculty| \n";
-foreach ($students as $student) {
+$models = $students;
 
-    echo "{$student->getId()} - {$student->getName()} - {$student->getSurname()} - {$student->getGender()} - {$student->getCategory()} - {$student->getFaculty()} \n";
-   
-}
+require "vendor/university/libs/console_output.php";
