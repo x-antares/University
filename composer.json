@@ -3,7 +3,10 @@
     "require": {
     	"doctrine/orm": "^2.6.2",
         "fzaninotto/faker": "^1.9",
-        "doctrine/migrations": "^3.0"
+        "doctrine/migrations": "^3.0",
+        "doctrine/cache": "^2.2",
+        "symfony/cache": "^5.4",
+        "doctrine/annotations": "^1.13"
     },
         "autoload": {
     	"psr-4": {
