@@ -25,8 +25,8 @@
       <td><?=$student->getGender()?></td>
       <td><?=$student->getCategory()?></td>
       <td><?=$student->getFaculty()?></td>
-      <td><a class="nav-link" href="../Main/edit">Edit</a></td>
-      <td><a class="nav-link" href="../Main/delete">Delete</a></td>    
+         <?php echo '<td><a class="nav-link" href="../Main/edit?id='.$student->getId() .'">Edit</td>';?>
+         <?php echo '<td><a class="nav-link" href="../Main/delete?id='.$student->getId() .'">Delete</td>';?>
     </tr>
     <?php endforeach;?>
   <?php endif; ?>

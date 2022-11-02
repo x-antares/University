@@ -1,6 +1,7 @@
-
+<?php if(isset($student)) { ?>
 <div>
 <form action="" method="post" class="form-group">
+    <input type="id" style="display: none">
   <br>
 	<p><label for="name">Name</label></p>
   <input type="name" class="form-control" aria-describedby="emailHelp" id="name" value= <?=$name?> name="name" placeholder="Jack" >
@@ -21,3 +22,4 @@
 </form>
 </div>
 
+<?php } ?>

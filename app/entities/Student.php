@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Entity;
-use Doctrine\ORM\Annotation;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -47,7 +46,6 @@ class Student
     */
     private $faculty;
 
-   
     public function getId()
     {
 
